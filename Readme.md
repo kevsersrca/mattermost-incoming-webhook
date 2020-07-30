@@ -2,10 +2,16 @@
 
 ![tutorial](tutorial.png)
 
+## Installation
+
+```
+go get github.com/kevsersrca/mattermost-incoming-webhook
+```
 ## Example
 
 ```go
-w := Payload{
+function main() {
+	w := Payload{
 		URL:      "http://example.com/hooks/",
 		Text:    "Hallo :tada:",
 	}
@@ -13,4 +19,6 @@ w := Payload{
 	if err != nil {
 		panic(err)
 	}
+}
+	
 ```
