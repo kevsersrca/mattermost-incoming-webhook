@@ -1,20 +1,14 @@
 # Mattermost Incoming Webhook
 
+![tutorial](tutorial.png)
 
 ## Example
 
 ```go
-w := Webhook{
+w := Payload{
 		URL:      "http://example.com/hooks/",
-		Username: "bot",
-		Channel:  "youtube",
+		Text:    "Hallo :tada:",
 	}
-
-	m := Message{
-		Webhook: w,
-		Text:    "Hallo",
-	}
-
 	err := m.Do()
 	if err != nil {
 		panic(err)
